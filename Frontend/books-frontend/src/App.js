@@ -36,7 +36,8 @@ function App() {
   }, [])
 
   const handleSearch = () => {
-    alert("Limpar")
+    alert("Cleaning")
+    window.location.reload()
   }
 
   const handleInputChange = (e) => {
@@ -52,13 +53,13 @@ function App() {
   return (
     <Container className="p-3">
       <h1>
-        Página inicial
+        Home Page
       </h1>
       <InputSearch name="Author" onChange={handleInputChange} />
       <InputSearch name="Title" onChange={handleInputChange} />
       <InputSearch name="Year" onChange={handleInputChange} />
       <InputSearch name="Pages" onChange={handleInputChange} />
-      <ButtonSearch name="Limpar" variant="primary" onClick={handleSearch} />
+      <ButtonSearch name="Clear" variant="primary" onClick={handleSearch} />
       <TableComponent books={books} />
     </Container>
   )
